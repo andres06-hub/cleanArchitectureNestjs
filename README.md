@@ -1,7 +1,9 @@
  <img align="left" width="116" height="116" src="https://raw.githubusercontent.com/jasontaylordev/CleanArchitecture/main/.github/icon.png" />
- # Clean Architecture
+
+  # Clean Architecture
 
 ## Description:
+
 This project fulfills to show how it would be a viable mvp to create an application with clean architecture (hexagonal architecture) and DDD.
 
 <p align="center">
