@@ -1,3 +1,9 @@
+ <img align="left" width="116" height="116" src="https://raw.githubusercontent.com/jasontaylordev/CleanArchitecture/main/.github/icon.png" />
+ # Clean Architecture
+
+## Description:
+This project fulfills to show how it would be a viable mvp to create an application with clean architecture (hexagonal architecture) and DDD.
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
