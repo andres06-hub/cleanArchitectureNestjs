@@ -1,7 +1,7 @@
-import { UserEntity } from './user.entity';
+// import { UserEntity } from './user.entity';
+
+export const USER_REPOSITORY = 'USER REPOSITORY';
 
 export interface UserRepository {
-  findUserById(id: string): Promise<UserEntity | null>;
-  registerUser({ id, name, email, password }): Promise<UserEntity | null>;
-  getUsers(): Promise<UserEntity[] | null>;
+  findUserById(id: string): Promise<string>;
 }
