@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { UserServiceInterface } from './user.interface';
+import { UserRepository } from '../domain/interfaces/user.repository';
 
 @Injectable()
-export class UserService implements UserServiceInterface {
-  async getUser(id: string) {
-    console.log('Get Users...');
-    return 'HELLO WORLD';
+export class UserService implements UserRepository {
+  async findUserById(id: string): Promise<string> {
+    console.log('Get User...' + id);
+    return `HELLO WORLD id: ${id}`;
   }
 }

@@ -1,3 +1,5 @@
+export const USER_SERVICE_INTERFACE = 'UserServiceInterface';
+
 export interface UserServiceInterface {
-  getUser(id: string);
+  findUserById(id: string);
 }
