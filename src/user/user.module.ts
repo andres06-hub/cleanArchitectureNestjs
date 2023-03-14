@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { UserController } from './infrastructure/user.controller';
+import { UserController } from '@user/infrastructure/user.controller';
 import {
   UserDbProvider,
   UserSrvIntProvider,
-} from './infrastructure/provider/user.provider';
-import { DatabaseModule } from 'src/providers/database/database.module';
+} from '@user/infrastructure/provider/user.provider';
+import { DatabaseModule } from '@providers/database/database.module';
 
 @Module({
   imports: [DatabaseModule],

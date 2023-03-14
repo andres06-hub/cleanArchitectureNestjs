@@ -1,5 +1,5 @@
 import { Controller, Get, Inject, Param } from '@nestjs/common';
-import { UserServiceInterface } from '../application/user.interface';
+import { UserServiceInterface } from '@user/application/ports/user.interface';
 
 @Controller('user')
 export class UserController {

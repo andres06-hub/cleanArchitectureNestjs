@@ -1,7 +1,7 @@
 import { DataSource } from 'typeorm';
-import { User } from '../models/user.model';
-import { USER_SERVICE_INTERFACE } from 'src/user/application/user.interface';
-import { UserService } from '../../application/user.service';
+import { User } from '@user/infrastructure/models/user.model';
+import { USER_SERVICE_INTERFACE } from '@user/application/ports/user.interface';
+import { UserService } from '@user/application/user.service';
 
 export const UserDbProvider = {
   provide: 'USER_REPOSITORY',

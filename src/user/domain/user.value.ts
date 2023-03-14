@@ -1,4 +1,4 @@
-import { UserEntity } from './interfaces/user.entity';
+import { UserEntity } from '@user/domain/interfaces/user.entity';
 
 export class user implements UserEntity {
   name: string;

@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm';
 import { config } from 'dotenv';
-import { User } from 'src/user/infrastructure/models/user.model';
+import { User } from '@user/infrastructure/models/user.model';
 import { Logger } from '@nestjs/common';
 
 config({ path: 'db.env' });
