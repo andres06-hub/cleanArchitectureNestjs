@@ -1,4 +1,4 @@
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Controller, Get, Inject, Param } from '@nestjs/common';
 import { UserServiceInterface } from '../application/user.interface';
 
 @Controller('user')
@@ -8,8 +8,8 @@ export class UserController {
     private readonly _userSrv: UserServiceInterface,
   ) {}
 
-  @Get()
-  async getUser(id: string) {
-    return this._userSrv.getUser(id);
+  @Get(':id')
+  async getUser(@Param('id') id: string) {
+    return this._userSrv.findUserById(id);
   }
 }
