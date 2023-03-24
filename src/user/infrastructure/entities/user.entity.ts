@@ -5,16 +5,26 @@ export class User {
   @PrimaryGeneratedColumn({
     name: 'id',
   })
-  id: string;
+  id: number;
+
+  @Column({
+    name: 'publicId',
+    nullable: false,
+  })
+  publicId: string;
 
   @Column({
     type: 'varchar',
   })
   name: string;
 
-  @Column()
+  @Column({
+    nullable: false,
+  })
   email: string;
 
-  @Column()
+  @Column({
+    nullable: false,
+  })
   password: string;
 }
