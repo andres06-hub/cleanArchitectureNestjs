@@ -18,9 +18,14 @@ export class DatabaseUserRepository implements UserRepository {
     return user;
   }
   async createUser(user: UserValue): Promise<UserValue> {
-    // throw new Error('Method not implemented.');
     const newUser = this.userRepository.create(user);
     return await this.userRepository.save(newUser);
+  }
+
+  async findUserByEmail(email: string): Promise<UserValue | null> {
+    return await this.userRepository.findOne({
+      where: { email },
+    });
   }
 
   toUserEntiry(data: UserValue): User {
