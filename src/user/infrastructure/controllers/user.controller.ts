@@ -1,6 +1,17 @@
-import { Body, Controller, Get, Inject, Param, Post } from '@nestjs/common';
-import { UserValue } from '@src/user/domain/user.value';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Inject,
+  Param,
+  Post,
+  UsePipes,
+  ValidationPipe,
+} from '@nestjs/common';
 import { UserServiceInterface } from '@user/application/ports/user.interface';
+import { UserDto } from '@user/domain/dto/user.dto';
 
 @Controller('user')
 export class UserController {
@@ -10,12 +21,15 @@ export class UserController {
   ) {}
 
   @Get(':id')
+  @HttpCode(HttpStatus.OK)
   async getUser(@Param('id') id: string) {
     return this._userSrv.findUserById(id);
   }
 
   @Post()
-  async createUser(@Body() user: UserValue) {
+  @HttpCode(HttpStatus.CREATED)
+  @UsePipes(ValidationPipe)
+  async createUser(@Body() user: UserDto) {
     return this._userSrv.createUser(user);
   }
 }
