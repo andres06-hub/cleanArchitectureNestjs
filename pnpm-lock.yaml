@@ -12,6 +12,7 @@ specifiers:
   '@types/jest': 29.2.4
   '@types/node': 18.11.18
   '@types/supertest': ^2.0.11
+  '@types/uuid': ^9.0.1
   '@typescript-eslint/eslint-plugin': ^5.0.0
   '@typescript-eslint/parser': ^5.0.0
   dotenv: ^16.0.3
@@ -37,6 +38,7 @@ dependencies:
   '@nestjs/core': 9.3.9_q6agyr4hwia55oswpsa7zjxcpm
   '@nestjs/platform-express': 9.3.9_77foi4w27ghy47yutmnzv7krjy
   '@nestjs/typeorm': 9.0.1_rfqdnwiybzocqbxtj3lzfvraga
+  '@types/uuid': 9.0.1
   dotenv: 16.0.3
   reflect-metadata: 0.1.13
   rxjs: 7.8.0
@@ -1295,6 +1297,10 @@ packages:
     dependencies:
       '@types/superagent': 4.1.16
     dev: true
+
+  /@types/uuid/9.0.1:
+    resolution: {integrity: sha512-rFT3ak0/2trgvp4yYZo5iKFEPsET7vKydKF+VRCxlQ9bpheehyAJH89dAkaLEq/j/RZXJIqcgsmPJKUP1Z28HA==}
+    dev: false
 
   /@types/yargs-parser/21.0.0:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
