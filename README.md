@@ -1,10 +1,15 @@
  <img align="left" width="116" height="116" src="https://raw.githubusercontent.com/jasontaylordev/CleanArchitecture/main/.github/icon.png" />
 
-  # Clean Architecture
+# Clean Architecture
 
 ## Description:
 
 This project fulfills to show how it would be a viable mvp to create an application with clean architecture (hexagonal architecture) and DDD.
+
+- [See more](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [See more](https://www.qwan.eu/2020/08/20/hexagonal-architecture.html)
+
+[img-clean-architecture]: https://user-images.githubusercontent.com/776825/144645528-e30234bd-088d-4066-845c-2e4bb3ed556e.png
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
