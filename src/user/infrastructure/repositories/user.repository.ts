@@ -17,6 +17,7 @@ export class DatabaseUserRepository implements UserRepository {
     });
     return user;
   }
+
   async createUser(user: UserValue): Promise<UserValue> {
     const newUser = this.userRepository.create(user);
     return await this.userRepository.save(newUser);
