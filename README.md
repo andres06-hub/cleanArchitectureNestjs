@@ -6,6 +6,12 @@
 
 This project fulfills to show how it would be a viable mvp to create an application with clean architecture (hexagonal architecture) and DDD.
 
+### The hexagonal architecture is based on three principles and techniques:
+
+> - Explicitly separate User-Side, Business Logic, and Server-Side
+> - Dependencies are going from User-Side and Server-Side to the Business Logic
+> - We isolate the boundaries by using Ports and Adapters
+
 - [See more](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 - [See more](https://www.qwan.eu/2020/08/20/hexagonal-architecture.html)
 
