@@ -4,7 +4,7 @@ import {
   UserDbProvider,
   UserSrvIntProvider,
 } from '@src/user/infrastructure/providers/user.provider';
-import { DatabaseModule } from '@providers/database/database.module';
+import { DatabaseModule } from '@src/database/database.module';
 import { DatabaseUserRepository } from '@user/infrastructure/repositories/user.repository';
 import { EncryptionService } from './application/usecases/encryption/encryption.service';
 

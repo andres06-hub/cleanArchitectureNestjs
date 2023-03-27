@@ -5,7 +5,7 @@ import { DatabaseUserRepository } from '../repositories/user.repository';
 import { EncryptionService } from '@src/user/application/usecases/encryption/encryption.service';
 import { USER_SERVICE_INTERFACE } from '@src/user/application/ports/user.interface';
 import { UserService } from '@src/user/application/usecases/user.service';
-import { DatabaseModule } from '@src/providers/database/database.module';
+import { DatabaseModule } from '@src/database/database.module';
 
 @Module({
   imports: [DatabaseModule],
