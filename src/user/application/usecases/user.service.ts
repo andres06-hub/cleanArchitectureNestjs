@@ -17,7 +17,7 @@ export class UserService implements UserServiceInterface {
   private log: Logger = new Logger();
 
   async findUserById(publicId: string): Promise<Response> {
-    const user: UserValue = await this.userReposirory.findUserByPublicId(
+    const user: UserModel = await this.userReposirory.findUserByPublicId(
       publicId,
     );
     this.log.log('User found');
@@ -31,7 +31,9 @@ export class UserService implements UserServiceInterface {
     const pwdhash: string = await this.encryption.encrypt(user.password);
     user = { ...user, publicId: uuidv4().split('-')[0], password: pwdhash };
     const newUser: UserValue = new UserValue(user);
-    const userCreated = await this.userReposirory.createUser(newUser);
+    const userCreated: UserModel = await this.userReposirory.createUser(
+      newUser,
+    );
     this.log.log('User created');
     return new Response(true, 'User Created!', userCreated);
   }
