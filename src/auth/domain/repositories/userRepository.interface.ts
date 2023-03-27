@@ -1,5 +1,5 @@
-import { UserModel } from '@auth/domain/models/user.model';
+import { UserModel } from '@auth/domain/models/auth.model';
 
-export interface UserRepository {
+export interface AuthRepository {
   finduserByEmail(email: string): Promise<UserModel>;
 }

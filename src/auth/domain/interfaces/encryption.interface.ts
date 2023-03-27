@@ -1,3 +1,3 @@
 export interface Encryption {
-  unencrypt(raw: string, hash: string): Promise<string>;
+  unencrypt(raw: string, hash: string): Promise<boolean>;
 }
