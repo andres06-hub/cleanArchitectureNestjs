@@ -22,6 +22,7 @@
     "commit": "commit"
   },
   "dependencies": {
+    "@commitlint/format": "^17.4.4",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
