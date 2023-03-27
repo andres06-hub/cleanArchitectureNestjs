@@ -10,13 +10,16 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { UserServiceInterface } from '@user/application/ports/user.interface';
+import {
+  USER_PORT_SERVICE,
+  UserServiceInterface,
+} from '@user/application/ports/user.interface';
 import { UserDto } from '@user/domain/dto/user.dto';
 
 @Controller('user')
 export class UserController {
   constructor(
-    @Inject('UserServiceInterface')
+    @Inject(USER_PORT_SERVICE)
     private readonly _userSrv: UserServiceInterface,
   ) {}
 
