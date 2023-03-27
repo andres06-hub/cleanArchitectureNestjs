@@ -21,6 +21,7 @@
       "@src/*": ["src/*"],
       "@user/*": ["src/user/*"],
       "@database/*": ["src/database/*"],
+      "@auth/*": ["src/auth/*"],
     }
   }
 }
