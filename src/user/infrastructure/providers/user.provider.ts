@@ -1,8 +1,9 @@
 import { DataSource } from 'typeorm';
 import { User } from '@src/user/infrastructure/entities/user.entity';
 import { USER_SERVICE_INTERFACE } from '@user/application/ports/user.interface';
-import { UserService } from '@user/application/user.service';
+import { UserService } from '@user/application/usecases/user.service';
 import { DatabaseUserRepository } from '../repositories/user.repository';
+import { EncryptionService } from '@src/user/application/usecases/encryption/encryption.service';
 
 export const UserDbProvider = {
   provide: 'USER_CONNECTION',
@@ -11,8 +12,10 @@ export const UserDbProvider = {
 };
 
 export const UserSrvIntProvider = {
-  inject: [DatabaseUserRepository],
+  inject: [DatabaseUserRepository, EncryptionService],
   provide: USER_SERVICE_INTERFACE,
-  useFactory: (dbUserRpository: DatabaseUserRepository) =>
-    new UserService(dbUserRpository),
+  useFactory: (
+    dbUserRpository: DatabaseUserRepository,
+    encryptionSrv: EncryptionService,
+  ) => new UserService(dbUserRpository, encryptionSrv),
 };
