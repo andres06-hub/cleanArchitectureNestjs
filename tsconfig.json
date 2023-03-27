@@ -20,7 +20,7 @@
     "paths": {
       "@src/*": ["src/*"],
       "@user/*": ["src/user/*"],
-      "@providers/*": ["src/providers/*"],
+      "@database/*": ["src/database/*"],
     }
   }
 }
