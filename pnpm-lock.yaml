@@ -4,6 +4,7 @@ specifiers:
   '@commitlint/cli': ^17.5.0
   '@commitlint/config-conventional': ^17.4.4
   '@commitlint/prompt-cli': ^17.5.0
+  '@commitlint/types': ^17.4.4
   '@nestjs/cli': ^9.0.0
   '@nestjs/common': ^9.0.0
   '@nestjs/core': ^9.0.0
@@ -62,6 +63,7 @@ devDependencies:
   '@commitlint/cli': 17.5.0
   '@commitlint/config-conventional': 17.4.4
   '@commitlint/prompt-cli': 17.5.0
+  '@commitlint/types': 17.4.4
   '@nestjs/cli': 9.2.0
   '@nestjs/schematics': 9.0.4_typescript@4.9.5
   '@nestjs/testing': 9.3.9_yqmogfxzeu633isbftgaoi4ho4
