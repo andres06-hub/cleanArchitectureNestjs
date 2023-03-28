@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Headers,
   HttpCode,
   HttpException,
   HttpStatus,
@@ -29,5 +30,13 @@ export class AuthController {
   async login(@Body() data: LoginDto): Promise<HttpException | Response> {
     const result: HttpException | Response = await this.authSrv.login(data);
     return result;
+  }
+
+  @Post('/validateToken')
+  @HttpCode(HttpStatus.OK)
+  async validate(
+    @Headers('authorization') authorization: string,
+  ): Promise<Response> {
+    return this.authSrv.isValidToken(authorization);
   }
 }
