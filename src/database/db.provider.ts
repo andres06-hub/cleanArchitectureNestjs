@@ -19,7 +19,7 @@ export const databaseProviders = [
         synchronize: true,
       });
       const x = await dataSource.initialize();
-      logger.log('Connection DataBase');
+      logger.log('Connection DataBase', new Date(), 'DB');
       return x;
     },
   },
