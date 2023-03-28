@@ -54,7 +54,7 @@ export class TokenService implements TokenSrvInterface {
           }),
         );
       }
-      console.log(error);
+      this.log.error(error, 'JWT');
     }
     return true;
   }
