@@ -5,4 +5,5 @@ export const AUTH_PORT_SERVICE = 'authPortService';
 
 export interface AuthServiceInterface {
   login(data: LoginModel): Promise<Response>;
+  isValidToken(token: string): Promise<Response>;
 }
