@@ -1,7 +1,8 @@
+import { UserModel } from '@src/user/domain/models/user.model';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'user' })
-export class User {
+export class User implements UserModel {
   @PrimaryGeneratedColumn({
     name: 'id',
   })
