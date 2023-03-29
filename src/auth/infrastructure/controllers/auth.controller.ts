@@ -34,9 +34,7 @@ export class AuthController {
 
   @Post('/validateToken')
   @HttpCode(HttpStatus.OK)
-  async validate(
-    @Headers('authorization') authorization: string,
-  ): Promise<Response> {
+  async validate(@Headers('authorization') authorization: string): Promise<Response> {
     return this.authSrv.isValidToken(authorization);
   }
 }

@@ -1,11 +1,11 @@
 import { DataSource } from 'typeorm';
+import { JwtService } from '@nestjs/jwt';
 import { User } from '@auth/infrastructure/entities/user.entity';
 import { AuthService } from '@auth/application/usecases/auth.service';
 import { DatabaseUserRepository } from '@auth/infrastructure/repositories/auth.repository';
 import { AUTH_PORT_SERVICE } from '@auth/application/ports/auth.port';
 import { EncryptionService } from '@auth/application/usecases/encryption/encryption.service';
-import { JwtService } from '@nestjs/jwt';
-import { TokenService } from '@src/auth/application/usecases/token/token.service';
+import { TokenService } from '@auth/application/usecases/token/token.service';
 
 export const UserDbProvider = {
   provide: 'USER_CONNECTION',
