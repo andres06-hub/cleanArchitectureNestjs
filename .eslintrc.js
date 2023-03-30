@@ -8,8 +8,8 @@ module.exports = {
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'eslint-config-prettier'
-    // 'plugin:prettier/recommended',
+    // 'eslint-config-prettier'
+    'plugin:prettier/recommended',
   ],
   root: true,
   env: {
