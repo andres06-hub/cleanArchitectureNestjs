@@ -16,7 +16,7 @@ import {
 } from '@user/application/ports/user.interface';
 import { UserDto } from '@user/domain/dto/user.dto';
 
-@Controller('user')
+@Controller({ path: 'user', version: '1' })
 export class UserController {
   constructor(
     @Inject(USER_PORT_SERVICE)

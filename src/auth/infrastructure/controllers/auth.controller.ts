@@ -17,7 +17,7 @@ import {
 import { Response } from '@auth/domain/dto/response.dto';
 import { LoginDto } from '@auth/domain/dto/login.dto';
 
-@Controller('auth')
+@Controller({ path: 'auth', version: '1' })
 export class AuthController {
   constructor(
     @Inject(AUTH_PORT_SERVICE)
@@ -34,7 +34,9 @@ export class AuthController {
 
   @Post('/validateToken')
   @HttpCode(HttpStatus.OK)
-  async validate(@Headers('authorization') authorization: string): Promise<Response> {
+  async validate(
+    @Headers('authorization') authorization: string,
+  ): Promise<Response> {
     return this.authSrv.isValidToken(authorization);
   }
 }
